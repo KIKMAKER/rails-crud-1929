@@ -1,0 +1,10 @@
+<h1>Restaurants</h1>
+<p>There are <%= @restaurants.count %> restaurants on this app</p>
+<ol>
+  <% @restaurants.each do |restaurant| %>
+    <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+  <% end %>
+</ol>
+
+
+<%= link_to 'add a restaurant', restaurants_new_path %>
